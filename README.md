@@ -4,27 +4,21 @@ The projects created with npx create-react-app automatically initializes its own
 A .git folder inside a subdirectory (e.g 03-pizza-menu) is already part of a parent Git repository and Git will treat that folder as a "gitlink" (submodule). The files inside the folder (e.g. 03-pizza-menu) will not be tracked or uploaded to your main repository on GitHub.
 If you do not fix this, Git will treat that folder as a "gitlink" (submodule), and the files inside 03-pizza-menu will not be tracked or uploaded to your main repository on GitHub.
 
-## How to Fix It (Example using 03-pizza-menu)
+## How to Fix It
 
-To include the folder and its files in your main repository, follow these steps:
+To include the folder and its files in your main repository (in this case, Udemy), follow these steps:
 
 ### 1. Remove the nested .git folder
 
-Navigate into the 03-pizza-menu folder and delete the hidden .git folder.
+Open Git Bash. Navigate into the [folder/subfolder] and delete the hidden .git folder.
 
-Windows (PowerShell): `Remove-Item -Recurse -Force 03-pizza-menu\.git`
+`cd [folder/subfolder]`
+`rm -rf .git`
 
-### 2. Remove the "gitlink" from the parent index
+### 2. Re-add and commit the files
 
-Tell your main repository to stop treating that folder as a separate entity:
-(bash) `git rm --cached 03-pizza-menu`
-
-(Note: Do not put a trailing slash after the folder name.)
-
-### 3. Re-add and commit the files
-
+Open another Git Bash bar.
 Now you can add the folder as normal files to your main project:
 
-(bash)
-`git add 03-pizza-menu`
-`git commit -m "Add pizza-menu files to main repository"`
+`git add [subfolder]`
+`git commit -m "Add [project] files to main repository"`
