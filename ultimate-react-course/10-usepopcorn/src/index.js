@@ -5,7 +5,9 @@ import ReactDOM from "react-dom/client";
 // import StarRating from "./StarRating";
 // import App from "./Challenge10";
 // import App from "./App12";
-import App from "./Challenge12";
+// import App from "./Challenge12";
+// import App from "./App13";
+import App from "./Challenge13";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
