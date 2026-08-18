@@ -132,6 +132,8 @@ export async function getBookedDatesByCabinId(cabinId) {
 export async function getSettings() {
   const { data, error } = await supabase.from("settings").select("*").single();
 
+  // await new Promise((res) => setTimeout(res, 5000));
+
   if (error) {
     console.error(error);
     throw new Error("Settings could not be loaded");
@@ -145,6 +147,10 @@ export async function getCountries() {
     const res = await fetch(
       "https://restcountries.com/v2/all?fields=name,flag",
     );
+
+    // "https://api.restcountries.com/countries/v5?response_fields=names.common,codes.alpha_2,flag.emoji",
+    //   { headers: { Authorization: "Bearer YOUR_API_KEY" } },
+
     const countries = await res.json();
     return countries;
   } catch {

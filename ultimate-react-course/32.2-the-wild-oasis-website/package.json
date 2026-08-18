@@ -1,5 +1,5 @@
 {
-  "name": "32.2-the-wild-oasis-website",
+  "name": "the-wild-oasis-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,9 @@
     "@supabase/supabase-js": "^2.42.1",
     "date-fns": "^3.6.0",
     "next": "14.1.4",
+    "next-auth": "^5.0.0-beta.16",
     "react": "^18",
+    "react-day-picker": "^8.10.1",
     "react-dom": "^18"
   },
   "devDependencies": {
