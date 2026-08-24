@@ -144,12 +144,18 @@ export async function getSettings() {
 
 export async function getCountries() {
   try {
-    const res = await fetch(
-      "https://restcountries.com/v2/all?fields=name,flag",
-    );
+    // const res = await fetch(
+    //   "https://restcountries.com/v2/all?fields=name,flag",
+    // );
 
-    // "https://api.restcountries.com/countries/v5?response_fields=names.common,codes.alpha_2,flag.emoji",
-    //   { headers: { Authorization: "Bearer YOUR_API_KEY" } },
+    const res = await fetch(
+      "https://api.restcountries.com/countries/v5?response_fields=names.common%2Cflag.emoji&pretty=1",
+      {
+        headers: {
+          Authorization: "Bearer rc_live_a8a0bad1804a472facda26ab19d509ea",
+        },
+      },
+    );
 
     const countries = await res.json();
     return countries;
@@ -171,7 +177,7 @@ export async function createGuest(newGuest) {
 
   return data;
 }
-
+/*
 export async function createBooking(newBooking) {
   const { data, error } = await supabase
     .from("bookings")
@@ -187,10 +193,11 @@ export async function createBooking(newBooking) {
 
   return data;
 }
-
+*/
 /////////////
 // UPDATE
 
+/*
 // The updatedFields is an object which should ONLY contain the updated data
 export async function updateGuest(id, updatedFields) {
   const { data, error } = await supabase
@@ -234,3 +241,4 @@ export async function deleteBooking(id) {
   }
   return data;
 }
+*/

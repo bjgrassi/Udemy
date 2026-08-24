@@ -3,9 +3,12 @@ import { getCountries } from "@/app/_lib/data-service";
 // Let's imagine your colleague already built this component 😃
 
 async function SelectCountry({ defaultCountry, name, id, className }) {
-  const countries = await getCountries();
+  const res = await getCountries();
+  // changed by me
+  const countries = res.data.objects;
   const flag =
-    countries.find((country) => country.name === defaultCountry)?.flag ?? "";
+    countries.find((country) => country.names.common === defaultCountry)?.flag
+      .emoji ?? "";
 
   return (
     <select
@@ -17,8 +20,11 @@ async function SelectCountry({ defaultCountry, name, id, className }) {
     >
       <option value="">Select country...</option>
       {countries.map((c) => (
-        <option key={c.name} value={`${c.name}%${c.flag}`}>
-          {c.name}
+        <option
+          key={c.names.common}
+          value={`${c.names.common}%${c.flag.emoji}`}
+        >
+          {c.names.common}
         </option>
       ))}
     </select>
