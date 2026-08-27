@@ -1,3 +1,16 @@
+## How to deploy on Netlify (No continuous integration)
+
+1. `npm run build` -> It will generate a "dist" folder
+2. add the **netfly.toml** on **dist** file
+3. import the **dist** folder
+
+## How to deploy on Vercel (Continuous integration)
+
+1. Import the git repository
+2. Configure the project. "Framework Present" ought to be **Next.js**
+3. Import the enviroment variables in ".env.local"
+4. Change NEXTAUTH_URL to vercel URL
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
