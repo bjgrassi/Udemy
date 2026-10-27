@@ -1,4 +1,4 @@
-## Courses made on Udemy
+## List of courses taken on Udemy
 
 | Repository            | Course Title                                                 | Instructor        |
 | --------------------- | ------------------------------------------------------------ | ----------------- |
