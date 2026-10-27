@@ -1,3 +1,10 @@
+## Courses made on Udemy
+
+| Repository            | Course Title                                                 | Instructor        |
+| --------------------- | ------------------------------------------------------------ | ----------------- |
+| DatingApp             | Build an app with ASPNET Core and Angular from scratch       | Neil Cummings     |
+| ultimate-react-course | The Ultimate React Course 2025: React, Next.js, Redux & More | Jonas Schmedtmann |
+
 # Important
 
 The projects created with npx create-react-app automatically initializes its own Git repository by default, creating a .git folder.
